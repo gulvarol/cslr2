@@ -1,0 +1,19 @@
+# weight parameters
+lda_sent_ret: 0.9
+lda_sign_ret: 0.0075
+lda_sign_cls: 0
+
+sent_ret:
+  _target_: loss.hn_nce.HardNegativeNCE
+  alpha: 1.0
+  beta: 1.0
+  temperature: 0.07
+
+sign_ret:
+  _target_: loss.hn_nce.HardNegativeNCE
+  alpha: 1.0
+  beta: 0.5
+  temperature: 0.07
+
+sign_cls:
+  _target_: torch.nn.CrossEntropyLoss

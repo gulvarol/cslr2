@@ -1,0 +1,13 @@
+dataloader:
+  _target_: torch.utils.data.DataLoader
+  batch_size: 128
+  shuffle: True
+  num_workers: 10
+  persistent_workers: True
+  drop_last: True
+  pin_memory: True
+
+# other parameters (used for training on subsets of the data, etc.)
+N: null
+train_data_fraction: 1.0
+val_data_fraction: 1.0

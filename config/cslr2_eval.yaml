@@ -1,0 +1,43 @@
+# configuration for CSLR evaluation
+hydra:
+  run:
+    dir: .{runs}/${run_name}
+
+defaults:
+  - _self_
+  - paths: public  # configuration file for paths
+  - model: cslr2  # configuration file for model
+  - dataset: sentence  # configuration file for dataset
+
+run_name: ??  # name of the run
+checkpoint: ??  # path to a checkpoint to load
+
+## Options for feature extraction
+swin: False  # if True, loaded model is a Swin model (used for Swin Transformer sliding window baseline)
+
+classification_only: False  # if True, only save linear classification results
+nn_classification_only: False  # if True, only save nearest neighbour classification results
+synonym_grouping: True  # if True, merge predictions when saving features
+temp: 0.05  # temperature to scale the nn sim matrix
+
+## Options for frame level evaluation
+prediction_pickle_files: null
+gt_csv_root: ${paths.heuristic_aligned_csv_root}  # root of GT to evaluate against
+remove_synonyms_handling: False  # if True, remove synonym handling from the evaluation procedure (merging predictions + if synonyms correct)
+remove_synonym_grouping: False  # if True, remove synonym grouping from the evaluation procedure (i.e., counting synonyms correct)
+
+do_vis: False  # if True, save CSLR visualisations (in png format)
+do_phrases_vis: False  # if True, save CSLR visualisations for phrases (in png format)
+
+effect_of_post_processing: False  # if True, save CSLR visualisations for the effect of post-processing (in png format)
+
+test_search: False  # if True, search for the best threshold and min_count params for the test set
+
+optimal_tau: null  # threshold used for evaluation on the test set
+optimal_mc: null  # min_count used for evaluation on the test set
+
+no_save: False  # if True, do not save results
+
+automatic_annotations: False  # if True, predictions are from automatic spottings.
+
+fps: 25  # framerate of the dataset

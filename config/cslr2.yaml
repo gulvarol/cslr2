@@ -1,0 +1,40 @@
+# configuration for running the cslr2 pipeline
+hydra:
+  run:
+    dir: ./runs/${run_name}
+
+defaults:
+  - _self_
+  - paths: public  # configuration file for paths
+  - optimizer: adam  # configuration file for optimizer
+  - model: cslr2  # configuration file for model
+  - dataset: sentence  # configuration file for dataset
+  - augmentation: defaults  # configuration file for augmentation
+  - loss: triple_loss  # configuration file for loss
+  - dataloader: defaults  # configuration file for dataloader
+  - trainer: defaults  # configuration file for trainer details
+
+run_name: ??  # name of the run
+
+checkpoint: null  # path to a checkpoint to load
+
+test: False  # if True, test the model for retrieval
+
+# visualisation settings
+vis: True  # if True, save visualisations
+worst_retrieval: False  # if True, save worst retrieved results
+nb_vis: 0  # number of visualisations to save per epoch
+
+# wandb settings
+wandb_offline: False  # if True, wandb will not be synced
+
+# distributed settings
+distributed: False
+world_size: null
+rank: null
+local_rank: null
+fixed_lr: False
+
+# other
+seed: 0  # for reproducibility
+do_print: True  # variable that controls printing (only prints in the main process)

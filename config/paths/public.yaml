@@ -1,0 +1,14 @@
+subset2episode: bobsl/splits/subset2episode.json
+vocab_pkl: bobsl/vocab/8697_vocab.pkl
+info_pkl: bobsl/unannotated-info/info-src_videos_2236.pkl
+annotations_pkl: bobsl/lmdbs/lmdb-pl_vswin_t-bs256_float16/
+vid_features_lmdb: bobsl/lmdbs/lmdb-feats_vswin_t-bs256_float16/
+word_embds_pkl: bobsl/vocab_embds/t5-large_8k_word_embeddings.pkl
+subtitles_path: bobsl/subtitles_pkl/best_delta_postpro_bobsl_best_traineval_0_pslab_ftune_.pkl
+aligned_subtitles_path: bobsl/subtitles_pkl/manually-aligned.pkl
+synonyms_pkl: bobsl/syns/synonym_pickle_english_and_signdict_and_signbank.pkl
+lm_root: t5_checkpoint/
+rgb_frames: bobsl/lmdbs/lmdb-rgb_anon-public_1962/
+log_dir: runs/
+misaligned_csv_root: bobsl/cslr/manual_glosses_extended_boundaries
+heuristic_aligned_csv_root: bobsl/cslr/manual_glosses_extended_boundaries_fix_alignment

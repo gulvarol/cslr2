@@ -1,0 +1,37 @@
+freeze_transformer: False
+
+cslr2:
+  _target_: models.cslr2.CSLR2
+  video_encoder:
+    _target_: models.transformer_encoder.make_model
+    vocab: 8697
+    N: 6
+    d_model: 768
+    h: 8
+    dropout: 0.1
+    contrastive: True
+  text_encoder:
+    _target_: models.t5.make_sentence_model
+    model_name: t5-large
+    root_path: ${paths.lm_root}
+  video_sequence_ll:
+    _target_: torch.nn.Linear
+    in_features: ${model.cslr2.video_encoder.d_model}
+    out_features: 256
+  video_token_ll:
+    _target_: torch.nn.Linear
+    in_features: ${model.cslr2.video_encoder.d_model}
+    out_features: ${model.cslr2.video_sequence_ll.out_features}
+  text_sentence_ll:
+    _target_: torch.nn.Linear
+    in_features: 1024  # size of text encoder embds
+    out_features: ${model.cslr2.video_sequence_ll.out_features}
+  text_word_ll:
+    _target_: torch.nn.Linear
+    in_features: ${model.cslr2.text_sentence_ll.in_features}
+    out_features: ${model.cslr2.video_sequence_ll.out_features}
+  pooling: max
+  sign_ret: True
+  no_video_encoder: False
+  same_text_ll: False
+  same_video_ll: False

@@ -1,0 +1,22 @@
+do_swap: False
+do_drop: True
+do_shuffle: True
+do_frame_drop: True
+
+swap_words:
+  _target_: augmentations.text_augment.SwapWords
+  nb_swaps : 1
+
+drop_words:
+  _target_: augmentations.text_augment.DropWords
+  p_sentence: 0.8
+  p_word: 0.4
+
+shuffle_words:
+  _target_: augmentations.text_augment.ShuffleWords
+  p_shuffle: 0.5
+
+frame_drop:
+  _target_: augmentations.video_augment.DropFrames
+  p_sequence: 0.8
+  p_frame: 0.5
