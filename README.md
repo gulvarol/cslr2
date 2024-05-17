@@ -6,7 +6,7 @@
 <a href="https://imagine.enpc.fr/~raudec/"><strong>Charles Raude</strong></a> · <a href="https://www.robots.ox.ac.uk/~prajwal/"><strong>Prajwal KR</strong></a> · <a href="https://www.robots.ox.ac.uk/~liliane/"><strong>Liliane Momeni</strong></a> ·
 <a href="https://hannahbull.github.io/"><strong>Hannah Bull</strong></a> · <a href="https://samuelalbanie.com/"><strong>Samuel Albanie</strong></a> · <a href="https://www.robots.ox.ac.uk/~az/"><strong>Andrew Zisserman</strong></a> · <a href="https://imagine.enpc.fr/~varolg"><strong>G&uuml;l Varol</strong></a>
 
-[![arXiv](https://img.shields.io/badge/arXiv-CSLR2-A10717.svg?logo=arXiv)](https://arxiv.org/abs/TODO)
+[![arXiv](https://img.shields.io/badge/arXiv-CSLR2-A10717.svg?logo=arXiv)](https://arxiv.org/abs/2405.10266)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
 </div>
@@ -15,7 +15,7 @@
 Official PyTorch implementation of the paper:
 <div align="center">
 
-[**A Tale of Two Languages: Large-Vocabulary Continuous *Sign Language* Recognition from *Spoken Language* Supervision**](https://arxiv.org/abs/TODO).
+[**A Tale of Two Languages: Large-Vocabulary Continuous *Sign Language* Recognition from *Spoken Language* Supervision**](https://arxiv.org/abs/2405.10266).
 
 </div>
 
