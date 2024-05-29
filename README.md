@@ -109,7 +109,7 @@ Training should save one model per epoch as `$EXP_NAME/models/model_$EPOCH_NB.pt
 
 ## Test :bar_chart:
 
-You can download a pretrained model from [here](TODO).
+You can download a pretrained model from [here](https://drive.google.com/file/d/1qyFHSFnxmy1rRGjlKEBfsjC8yt2kdalx/view?usp=sharing).
 
 ### 1. Retrieval on 25K manually aligned test set
 
