@@ -207,3 +207,5 @@ This code is developed by [Charles Raude](https://github.com/charles-raude), may
 maintained, and is distributed under an [MIT LICENSE](LICENSE).
 
 Note that the code depends on other libraries, including PyTorch, T5, Hydra, and use the BOBSL dataset which each have their own respective licenses that must also be followed.
+
+The license for the BOBSL-CSLR data can be found at [https://imagine.enpc.fr/~varolg/cslr2/license.txt](https://imagine.enpc.fr/~varolg/cslr2/license.txt).
